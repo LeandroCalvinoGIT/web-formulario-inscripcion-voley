@@ -40,10 +40,72 @@ header{
   background-attachment: fixed;
   /* scroll / fixed / local */
   background-size: cover;
-  height: 300px;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  color: whitesmoke;
+  font-size: 7rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+  font-style: italic;
+  text-align: center;
 }
 
 footer{
   background-color: var(--gris-primario);
   font-style: italic;
+  text-align: center;
+  height: 7vh;
+}
+
+
+/* --------------------------------------------.FORMS.------------------------------------------------ */
+form{
+  background-image: url(./img/voleyball-court.png);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 70%;
+  height: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea:focus, input[type="text"]:focus{
+  resize: none;
+  outline: 1px red solid;
+}
+
+textarea{
+  resize: none;
+  width: 100%;
+  height: 10em;
+}
+fieldset{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px black solid;
+  height: 50%;
+}
+
+input[type="radio"]{
+  appearance: radio;
+  cursor: pointer;
+  
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: var(--gris-secundario);
 }

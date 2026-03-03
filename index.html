@@ -12,7 +12,117 @@
       <h1>INSCRIPCIÓN!</h1>
     </header>
     <main>
-      <form action=""></form>
+      <section class="formulario">
+        <form action="" method="POST" enctype="multipart/form-data">
+          <!-- DATOS PERSONALES -->
+          <fieldset>
+            <legend>Datos Personales:</legend>
+
+            <label for="fullname">Nombre y Apellido:</label>
+            <input
+              id="fullname"
+              name="fullname"
+              type="text"
+              required
+              placeholder="Ej: Agustin Loser"
+            />
+
+            <label for="birthdate">Fecha de Nacimiento:</label>
+            <input
+              id="birthdate"
+              name="birthdate"
+              type="date"
+              required
+              placeholder="Ej: 06/12/2004"
+            />
+
+            <label for="mail">Correo electrónico:</label>
+            <input
+              id="mail"
+              name="mail"
+              type="email"
+              value="tumail@gmail.com"
+              required
+              placeholder="Ej: agustinloser@fmv.com"
+            />
+
+            <label for="phone">Número de teléfono:</label>
+            <input
+              id="phone"
+              type="tel"
+              required
+              placeholder="Formato: 15-11254567"
+              pattern="[0-9]{2}-[0-9]{8}"
+            />
+
+            <label for="terms"
+              >Querés que nos contactemos en futuros llamados?</label
+            >
+            <input type="checkbox" id="terms" />
+          </fieldset>
+
+          <!-- VOLEY -->
+          <fieldset>
+            <legend>Datos de jugador/a</legend>
+
+            <label for="years">Años jugando:</label>
+            <input
+              id="years"
+              name="years"
+              type="number"
+              required
+              min="0"
+              max="99"
+              placeholder="Ej:4"
+            />
+
+            <label for="position">Posición:</label>
+            <select name="position" id="position">
+              <option value="">Seleccionar</option>
+              <option value="armador">Armador/a</option>
+              <option value="punta">Punta</option>
+              <option value="opuesto">Opuesto/a</option>
+              <option value="libero">Libero</option>
+              <option value="central">Central</option>
+            </select>
+
+            <fieldset>
+              <legend>Divison:</legend>
+              <input
+                type="radio"
+                name="division"
+                id="masculino"
+                value="masculino"
+              />
+              <label for="division">Masculino</label>
+              <input
+                type="radio"
+                name="division"
+                id="femenino"
+                value="femenino"
+              />
+              <label for="division">Femenino</label>
+              <input type="radio" name="division" id="mixto" value="mixto" />
+              <label for="division">Mixto</label>
+            </fieldset>
+            <label for="file">Apto Físico:</label>
+            <input
+              type="file"
+              name="file"
+              id="file"
+              accept="image/jpg, doctype/pdf"
+            />
+            <label for="comments">Comentarios adicionales:</label>
+            <textarea name="comment" id="comment" rows="4" cols="25"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Terminar Formulario:</legend>
+            <button type="submit">Enviar datos</button>
+            <button type="reset">Reiniciar</button>
+          </fieldset>
+        </form>
+      </section>
     </main>
     <footer>
       <p>All rights reserved to apv!</p>
